@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My First JS</h2>
+
+    <p id="date">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia illo, assumenda veritatis distinctio ipsa voluptate, deleniti atque ratione vel cum repudiandae fugiat magnam. Maxime voluptate repellendus voluptas ex reprehenderit quaerat?</p>
+
+    <button type="button" onclick="document.getElementById('date').innerHTML=Date()">
+    click to see date and time
+    </button>
+
+    <h2>cap text will change into small after click</h2>
+    <p id="myid">AHMEDABAD</p>
+
+    <button type="button" onclick="document.getElementById('myid').innerHTML='ahmedabad'">
+    cap to small</button>
+
+    <button type="button" onclick="document.getElementById('myid').innerHTML='AHMEDABAD'">
+    small to cap</button>
+
+    <button type="button" onclick="document.getElementById('bulb').src='bulbOff.jpg'">
+    Turn off the light</button>
+    
+    <img id="bulb" style="height: 100px ; width: 100px;" src="./bulbOff.jpg" alt="bulb">
+
+    <button type="button" onclick="document.getElementById('bulb').src='bulbOn.jpg'">
+    Turn on the light</button>
+
+</body>
+</html>
