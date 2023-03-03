@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function myfun(){
+            document.getElementById('abc').innerHTML='my first javascript.'
+        }
+    </script>
 </head>
 <body>
+
+    <!-- document.getElementById(' ').innerHTML=' ' -->
+
     <h2>My First JS</h2>
 
     <p id="date">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia illo, assumenda veritatis distinctio ipsa voluptate, deleniti atque ratione vel cum repudiandae fugiat magnam. Maxime voluptate repellendus voluptas ex reprehenderit quaerat?</p>
@@ -25,13 +33,30 @@
     <button type="button" onclick="document.getElementById('myid').innerHTML='AHMEDABAD'">
     small to cap</button>
 
+    <!-- .src=' ' -->
+
     <button type="button" onclick="document.getElementById('bulb').src='bulbOff.jpg'">
     Turn off the light</button>
     
     <img id="bulb" style="height: 100px ; width: 100px;" src="./bulbOff.jpg" alt="bulb">
 
     <button type="button" onclick="document.getElementById('bulb').src='bulbOn.jpg'">
-    Turn on the light</button>
+    Turn on the light</button> <br>
 
+    <!-- .style.display=' ' -->
+
+    <p id="hide" style="display: none;"> ehbadfhbada</p>
+    <button type="button" onclick="document.getElementById('hide').style.display='none'">
+    click to hide</button>
+    <button type="button" onclick="document.getElementById('hide').style.display='block'">
+    click to see</button>
+
+    <!-- script in head & use of function(we called function from head)
+    onclick=myfun()-->
+    <p id="abc">this is html</p>
+
+    <button type="button" onclick="myfun()">click me</button>
+    <!-- we can write same script in bottom of body,it's the same thing
+    can also put in .js files as external script, useful when same code used in so many web pages -->
 </body>
 </html>

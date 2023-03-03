@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- we will make function which will return values 
+    function call by variable or by function values-->
+    <p id="test"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <p id="test5"></p>
+<script>
+    var x = Myfun(2,8)
+    function  Myfun(p1,p2){
+        return p1 * p2;
+    }
+    function cal(p){
+        return 5 * p + (10);
+    }
+    document.getElementById('test').innerHTML=Myfun(4,5);
+    document.getElementById('test2').innerHTML = x;
+    document.getElementById('test3').innerHTML = cal(3)
+    
+    function Fun(){
+        let x = [5,7]
+        document.getElementById('test4').innerHTML = x[0] * x[1];
+    }  
+    Fun();
+    function Fun2(){
+        let x = "Volvo"
+        document.getElementById('test5').innerHTML = typeof x + " " + x;
+    }
+    Fun2();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p id="info"></p>
+    <p id="full"></p>
+<script>
+    const person = {
+        name   :"Parv", 
+        age    :21, 
+        city   :"ahmedabad", 
+        fullinfo : function(){
+            return this.name + " " + this.age + this.city;
+        
+        }
+    };
+    document.getElementById('info').innerHTML = "My name is " + person.name + " and i am " + person.age +
+    " years old, i am from " + person["city"] + "."
+    document.getElementById('full').innerHTML = person.fullinfo();
+</script>
+</body>
+</html>
