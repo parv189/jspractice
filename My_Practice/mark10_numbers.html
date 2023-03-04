@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- toString Infinity while n bigInt 0b1000000n 0x0000n 0o00000n
+    MAX_SAFE_INTEGER MIN_SAFE_INTEGER isInteger isSafeInteger()-->
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+<script>
+let myNum = 2;
+text = "";
+for(let x=1 ; x <= 10 ;x++){
+    myNum *= myNum ;
+    text =text + myNum + "<br>";
+}
+document.getElementById('demo').innerHTML = text + "<br>";
+
+let myNumber = 2;
+text1 = "";
+while(myNumber != Infinity){
+    myNumber *= myNumber ;
+    text1 =text1 + myNumber + "<br>";
+}
+document.getElementById('demo2').innerHTML = text1 + "<br>";
+
+let number = 45;
+document.write(number.toString(4)); + "<br>"
+
+let n = 999999999999999999999999999999999n;
+let k = BigInt(5);
+let l = n+k;
+document.getElementById('demo3').innerHTML = n ;
+document.getElementById('demo4').innerHTML = l ;
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test"></p>
+    <p id="test1"></p>
+    <p id="demo"></p>
+    <!-- .length x.slice(1,2,-1) x.substring() x.substr() x.replace("a","b")
+    /MICROSOFT/i  makes case incensitive /microsoft/g to replace all matches replaceall()
+    toLowerCase() toUpperCase() x.concat(" ",y) x.trim() trimStart trimEnd padStart padEnd split(",")-->
+<script>
+    let x = "kajhidfuvhdjva";
+    let lengh = x.length;
+    document.write(lengh);
+    let part = x.slice(2,7);
+    document.write(part);
+    let set = "apple,Banana,kiwi"
+    // to make object of string
+    let a = new String("parv");
+    let b = new String("parv");
+    document.write(set.slice(7,15));
+    document.write(" "+x.slice(-8));
+    document.write(" "+x.substring(7));
+    document.write(" "+x.substr(2,5));
+    document.write(" "+set.substr(-4))
+    // using \ to make special character normmal
+    document.write(set.replace("apple","\"orange"));
+    // js object can not be compared
+    document.getElementById('test').innerHTML = (a==b);
+    document.getElementById('test1').innerHTML = (a===b);
+
+    let text = "parv gajipara"
+    const myArr = text.split("");
+    text = "";
+    for (let i = 0 ; i < myArr.length ; i++){
+        text += myArr[i] + "<br>"
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

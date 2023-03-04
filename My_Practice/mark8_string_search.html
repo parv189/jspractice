@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- indexOf lastIndexOf search length Arrat.from includes startWith endWith//ig -->
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+<script>
+    let text = "parv gajipara PAR"
+    document.getElementById('demo').innerHTML = text.indexOf('par') + "<br>";
+    document.getElementById('demo1').innerHTML = text.search(/par/g) + "<br>";
+    document.getElementById('demo2').innerHTML = text.lastIndexOf('par') + "<br>";
+    document.getElementById('demo3').innerHTML = text.indexOf('par',5) + "<br>";
+    const x = text.match('par');
+    document.getElementById('demo3').innerHTML = x.length + " " + x ;
+    const y = text.match(/par/g);
+    document.getElementById('demo4').innerHTML = y.length + " " + y ;
+    const z = text.matchAll("par");
+    document.getElementById('demo5').innerHTML = Array.from(z);
+    const j = text.matchAll(/par/ig);
+    document.getElementById('demo5').innerHTML = Array.from(j);
+    let sentence = "Hello world, welcome to the universe"
+    document.getElementById('demo7').innerHTML = sentence.includes("welcome" ,11);
+</script> 
+</body>
+</html>

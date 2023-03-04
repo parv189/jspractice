@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- template litereals can contain variables -->
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+<script>
+    let text = `parv gajipara`;
+    document.getElementById('demo1').innerHTML = text;
+    let text1 = `parv "gajipara"`;
+    document.getElementById('demo2').innerHTML = text1;
+    let text2 = 
+    `parv 
+    gajipara`;
+    document.getElementById('demo3').innerHTML = text2;
+    let header = "this is header"
+    let tags = ['template literals','javascript','es6'];
+    let html = `<h2>${header}</h2>`;
+    for (const x of tags){
+        htm += `<ul><li>${x}</li></ul>`
+    }
+    document.getElementById('demo4').innerHTML = html;
+</script>
+</body>
+</html>
