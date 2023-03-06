@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+<script>
+    let x = myFun(3,4);
+    document.getElementById('demo').innerHTML = x;
+
+    function myFun(a,b){
+        return a * b;
+    }
+    const x1 = function(a,b){return a* b};
+    document.getElementById('demo2').innerHTML = x1(3,5);
+
+    const x2 = new Function('a','b','return a * b');
+    document.getElementById('demo3').innerHTML = x2(6,7);
+
+
+    document.getElementById('demo4').innerHTML = myFun3(3,3);
+    function myFun3(a,b){
+        return  a * b;
+    }
+    (function(){
+        let x = "hellow";
+        document.getElementById('demo5').innerHTML = x;
+    })();
+    var g = myFun(8,9);
+    document.getElementById('demo6').innerHTML = g;
+    myFun4 = (x,y) => x * y;
+</script>
+</body>
+</html>
