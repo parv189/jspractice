@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) if argument is undefined, we can do following
+         2) using argument as array,...a(rest parameters) and perform tasks -->
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+    <p id="t4"></p>
+    <p id="t5"></p>
+    <p id="t6"></p>
+<script>
+    function myFun(a,b){
+        if (a === NaN){
+            a = 2;
+        }
+        return a * b;
+    }
+    document.getElementById('t1').innerHTML = myFun(NaN,3);
+
+    function myF(a,b){
+        if(b === undefined){
+            b = 2;
+        }
+        return a * b;
+    }
+    document.getElementById('t2').innerHTML = myF(3);
+
+    function myF1(a,b=10){
+        return a * b;
+    }
+    document.getElementById('t3').innerHTML = myF1(3);
+
+    function myF2(...a){
+        let sum = 0;
+        for(let x of a){
+            sum += x;
+        }
+        return sum;
+    }
+    document.getElementById('t4').innerHTML = myF2(1,2,3,4,5,6,7,8,9);
+
+    function myF3(...a){
+        let max = -Infinity;
+        for(let i = 0 ; i < a.length ; i++){
+            if(a[i] > max){
+                max = a[i];
+            }
+        }
+        return max;
+    }
+    document.getElementById('t5').innerHTML = myF3(1,2,3,4,50,6,7,8,9); /* can use Math.max() */
+
+    function sumAll(...a){
+        sum = 0;
+        for(let i = 0 ; i < a.length ; i++){
+            sum += a[i]
+        }
+        return sum;
+    }
+    document.getElementById('t6').innerHTML = sumAll(33,56,18,65,39,63,23);
+</script>
+</body>
+</html>

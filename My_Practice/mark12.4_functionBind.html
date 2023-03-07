@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bind() method is used to bind method of two function & prevent loosing this -->
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+<script>
+    const person = {
+        fullName: function(){
+            return this.fName + " " + this.lName;
+        }
+    }
+    const person1 = {
+        fName: "parv",
+        lName: "gajipara",
+    }
+    
+    let fullName = person.fullName.bind(person1);
+    document.getElementById('t1').innerHTML = fullName();
+    document.getElementById('t2').innerHTML = person.fullName.call(person1);
+
+    const student = {
+        fName: "parv",
+        lName: "gajipara",
+        fullName2: function(){
+            document.getElementById('t3').innerHTML = this.fName + " " + this.lName;
+        }
+    }
+    let fullName2 = student.fullName2.bind(student)
+    setTimeout(fullName2,3000);
+</script>
+</body>
+</html>

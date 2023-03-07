@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <script>
+        const n1 = parseFloat(prompt("Enter First Number"));
+        const n2 = parseFloat(prompt("Enter Second Number"));
+        const n3 = parseFloat(prompt("Enter Third Number"));
+
+        function getMax(a, b, c) {
+            let max;
+            if (a > b && a > c) {
+                max = a;
+            }
+            else if (b > c && b > a) {
+                max = b;
+            }
+            else {
+                max = c;
+            }
+            return max;
+        }
+        function sum(a, b, c) {
+            var total = a + b + c;
+            if (total > 40) {
+                return total;
+
+            }
+            else {
+                document.getElementById("t2").style.display = 'none';
+            }
+
+        }
+        document.getElementById("t1").innerHTML = "Gratest Number is: " + getMax(n1, n2, n3);
+        document.getElementById("t2").innerHTML = "Sum of all numbers is: " + sum(n1, n2, n3);
+    </script>
+</body>
+
+</html>

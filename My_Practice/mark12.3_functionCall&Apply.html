@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- with call() & apply() method an object can use method of another object 
+            only difference is, apply method takes arguments as array-->
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+<script>
+    const person = {
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    const person1 = {
+        firstName: "Parv",
+        lastName: "Gajipara"
+    }
+    const person2 = {
+        firstName: "Nirav",
+        lastName: "Gajipara"
+    }
+    const person3 = {
+        firstName: "Nikhil",
+        lastName: "Gajipara"
+    }
+
+    document.getElementById("t1").innerHTML = person.fullName.call(person3);
+
+
+    const student = {
+        fullName: function(number,city) {
+            return this.firstName + " " + this.lastName + " " + number + " " + city;
+        }
+    }
+    const stud1 = {
+        firstName: "Parv",
+        lastName: "Gajipara"
+    }
+    const stud2 = {
+        firstName: "Nirav",
+        lastName: "Gajipara"
+    }
+    const stud3 = {
+        firstName: "Nikhil",
+        lastName: "Gajipara"
+    }
+
+    document.getElementById("t2").innerHTML = student.fullName.apply(stud3,["IU0005","Gadhali"]);
+
+    document.getElementById("t3").innerHTML = Math.max.apply(null,[2,5,56,3,89]);
+
+    
+</script>
+</body>
+</html>
