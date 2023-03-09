@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- character set -->
+    <!-- quantifers -->
+</head>
+<body>
+<script>
+//    const reg = /Gaj[apkz]para/i;                 //matches if a,p,k,z at that position in string
+//    const reg = /Gaj[^apkz]para/i;                 //matches if not a,p,k,z at that position in string
+//    const reg = /Gaj[^apkz]pa[abcra]/i;             //matches if not a,p,k,z at that position in string and a,b,c,r,a at that position in string
+    let reg = /Gaj[a-z]par[rdf]/i;                    //matches if found at that position
+    reg = /gajipa{1}ra/;                              //matches if aa
+    reg = /gajipa{0,2}ra/;                            //matches if 0 to 2 a
+    reg = /(gaji){0,2}([1]r){1}a/;
+   let x = "hello everyone gajigaji1ra is vary gajipaara fine";
+
+
+    console.log(reg.exec(x));
+    if(reg.exec(x)){
+        console.log(`string ${x} matches regx ${reg}`);
+    }
+    else{
+        console.log(`string ${x} does not matches regx ${reg}`);
+    }
+
+</script>
+</body>
+</html>

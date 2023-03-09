@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = /parv/;
+        x = /parv/gi;
+        console.log(x);
+
+        let s = "hello i am pArv and parv"
+        let reg = x.exec(s);
+        console.log(reg);
+        console.log(reg.index);
+
+        console.log(x.test(s));
+
+        let result = s.match(x);
+        console.log(result);
+
+        let result2 = s.search(x);
+        console.log(result2);
+
+        let result3 = s.search(x);
+        console.log(result2);
+
+        let result4 = s.replace(x,"meet");
+        console.log(result4);
+
+    </script>
+</body>
+
+</html>

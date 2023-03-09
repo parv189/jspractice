@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // let reg = /parv/;                string matches if string has parv
+    // let reg = /^hellokjh/;           string matches if string starts with parv
+    // let reg = /arv$/;                string matches if string ends with parv
+    // let reg = /p.arv/;               string matches any one character
+    // let reg = /p*arv/                string matches any one character
+    // let reg = /ps?arvk?/               // ? after character means that character is optional
+    let reg = /p\*arv/                  //igmors meta character *
+    let s = "hello parv this is parv";
+    console.log(reg);
+    console.log(reg.exec(s));
+
+    if(reg.test(s)){
+        console.log(`the string ${s} match the regx ${reg.source}`);
+    }
+    else{
+        console.log(`the string ${s} does not match the regx ${reg.source}`);
+    }
+</script>
+</body>
+</html>
