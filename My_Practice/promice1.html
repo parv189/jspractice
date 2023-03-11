@@ -18,13 +18,14 @@
             border: 1px solid gray;
             border-radius: 5px;
         }
-        
-        .row1{
+
+        .row1 {
             display: flex;
             justify-content: end;
-            
+
         }
-        .row2{
+
+        .row2 {
             display: flex;
             justify-content: center;
         }
@@ -53,28 +54,30 @@
     </div>
 
     <script>
-        function myfun() {
+        function myfun(n,m) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    const n = document.getElementById("num1").value;
-                    const m = document.getElementById("num2").value;
-                    if (n == Math.sqrt(m)) {
+
+                    if (n == Math.sqrt(m) && (n, m != "")) {
                         resolve(1);
                     }
                     else {
-                        reject(0);
+                        const err = new Error("wrong answare");
+                        reject(err);
                     }
-                }, 10000);
+                }, 5000);
             })
         }
 
+        const n = document.getElementById("num1").value;
+        const m = document.getElementById("num2").value;
 
-        myfun().then((x) => {
+        myfun(n,m).then((x) => {
             alert("your answare is true");
-        })
-        myfun().catch((y) => {
+        }).catch((y) => {
             alert("your answare is wrong");
         })
+
         setInterval(() => {
             const d = new Date();
             let s = d.toLocaleTimeString();

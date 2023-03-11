@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- issue with callback 
+        1) callback hell
+        2)inversion of control 
+
+    benifits of callback ---- to do asyncronce thing
+    syncronus single thareded language ->it has just one call stack, means do one task at a time , code quicklly qxecuted by the js emgine
+    time,tide&js waits for none-->
+
+    <script>
+        setTimeout(function () {
+            console.log("parv");
+        }, 1000);
+
+        console.log("Gajipara");
+
+// callbake create callbackhell problem when all api is dependent on each other, unmaintanable code,bellow atructure is known as piramid of doom
+// here makepayment is bliend dpendent on createorder and createorder takes control of makepayment, whatif it dont call makepayment
+        const cart = ["pant","shirt","t-shirt"];
+
+        api.createOrder(cart,function(){
+            api.makePayment(function(){
+                api.showOrderSummary(() => {
+                    api.updateWallet()
+                })
+            })
+        })
+    //go to promise 
+        
+    </script>
+</body>
+
+</html>
