@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-top: 200px;
+            display: block;
+            margin: 0 495px;
+        }
+
+        .contain {
+            padding: 20px 50px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: end;
+
+        }
+
+        .row2 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="text-align:center">You have 10sec to answare this queation</h3>
+
+    <div class="container">
+        <div class="row1">
+            <div class="time">
+                <p id="t1"></p>
+            </div>
+        </div>
+        <div id="mydiv" class="row2">
+            <div class="contain">
+                <label for="num1">Type a number from 1 to 9</label>
+                <input type="number" name="num1" id="num1">
+            </div>
+            <div class="contain">
+                <label for="num1">Type square of that number</label>
+                <input type="number" name="num2" id="num2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfun(n,m) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+
+                    if (n == Math.sqrt(m) && (n, m != "")) {
+                        resolve(1);
+                    }
+                    else {
+                        const err = new Error("wrong answare");
+                        reject(err);
+                    }
+                }, 5000);
+            })
+        }
+
+        const n = document.getElementById("num1").value;
+        const m = document.getElementById("num2").value;
+
+        myfun(n,m).then((x) => {
+            alert("your answare is true");
+        }).catch((y) => {
+            alert("your answare is wrong");
+        })
+
+        setInterval(() => {
+            const d = new Date();
+            let s = d.toLocaleTimeString();
+            document.getElementById("t1").innerHTML = s;
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
