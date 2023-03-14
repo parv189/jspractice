@@ -14,7 +14,7 @@
         }
 
         .contain {
-            padding: 20px 50px;
+            padding: 30px 50px;
             border: 1px solid gray;
             border-radius: 5px;
         }
@@ -52,34 +52,40 @@
             </div>
         </div>
     </div>
-
+<!-- parserInt to take number because input type number gives us string
+== can do typeconversion so 10 == '10' is true -->
     <script>
-        function myfun(n,m) {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
+        setTimeout(() => {
+            const n = parseInt(document.getElementById("num1").value);
+            const m = document.getElementById("num2").value;
+            console.log(typeof n);
+            console.log(typeof m);
+            myfun(n, m).then((ans) => {
+                alert("your answare is true");
+            }).catch((err) => {
+                alert("your answare is wrong");
+            });
+        }, 8000);
 
-                    if (n == Math.sqrt(m) && (n, m != "")) {
-                        resolve(1);
-                    }
-                    else {
-                        const err = new Error("wrong answare");
-                        reject(err);
-                    }
-                }, 5000);
+
+        function myfun(n, m) {
+            return new Promise((resolve, reject) => {
+
+                if (n === Math.sqrt(m)) {
+                    const ans = "your answer is true"
+                    console.log(n+" "+m);
+                    console.log(typeof n);
+                    resolve(ans);
+                } else {
+
+                    const err = new Error("wrong answer");
+                    reject(err);
+                }
             })
         }
 
-        setTimeout(() =>{
-            
-        })
-        const n = document.getElementById("num1").value;
-        const m = document.getElementById("num2").value;
 
-        myfun(n,m).then((x) => {
-            alert("your answare is true");
-        }).catch((y) => {
-            alert("your answare is wrong");
-        })
+
 
         setInterval(() => {
             const d = new Date();

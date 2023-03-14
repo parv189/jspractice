@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="t1"></p>
+<script>
+    months = ["jan","fab","mar","apr"];
+    days = ["sun","mon","tue","wed"]
+    const d = new Date();
+    a = d.getFullYear();
+    document.write(d.getMinutes() + "   ");
+    document.write(d.getSeconds() + "   ");
+    document.write(days[d.getDay()] + "   ");
+    document.write(months[d.getMonth()] + "   ");
+    document.write(d.getHours() + "   ");
+    document.write(d.getMilliseconds() + "   ");
+    document.getElementById('t1').innerHTML = a;
+</script>
+</body>
+</html>
