@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- we can pass object in argument and function is object so we can passfunction -->
+<!-- callback makes code asynchronous -->
+
+    <script>
+       function display(dis){
+        console.log(dis);
+       }
+
+       function cal (n,m,call){
+        let z = "";
+        if(n > 10 && m>10){
+            z = n-m;
+        }
+        else{
+            z = n+m;
+        }
+        call(z);
+
+       }
+       cal(3,44,display);
+    </script>
+</body>
+</html>
