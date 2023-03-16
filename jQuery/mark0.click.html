@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    this is first practice
+    <p id="t1">heyyyyy, i am p1</p>
+    <p id="t2">heyyyyy, i am p2</p>
+    <p id="t3">heyyyyy, i am p3</p>
+    <p id="t4">heyyyyy, i am p4</p>
+    <p id="t5">heyyyyy, i am p5</p>
+    <p id="t6">heyyyyy, i am p6</p> 
+    <p id="t7">heyyyyy, i am p7</p>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- topics: $/jQuery, selector/('p'), .click(), .hide(), this as selector -->
+
+
+    <script>
+        console.log($);
+        console.log(jQuery);  // both above lines have same meaning
+        console.log("we are learning jQuery")
+
+        // syntex: $('selector').action()
+        $('p').click(function(){                //do this when clicked on selector
+            console.log("you clicked on p")
+        });
+        $('p').click(function(){              //do this when clicked on selector
+            document.getElementById('t1').innerHTML = ("how are you?")
+        })
+       // $('p').hide();        // it will hide all selectors
+        $('p').click(function(){   //this: it only hides one selectd selector
+            $(this).hide();
+        })
+        $('#t3').click(function(){      //it will hide #t4 while selecting on #t3
+            $('#t4').hide();
+        })
+
+    </script>
+</body>
+</html>

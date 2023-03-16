@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>this is p1</p>
+    <p id="t1">this is p2</p>
+    <p>this is p3</p>
+    <p class="k1">this is p4</p>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+<!-- types of selectors, ready, this as value -->
+
+    <script>
+        $(document).ready(function(){       //ready document befor execution of script $(document).ready = $
+
+            $('p').click(function(){        //element selector
+                $(this).hide();
+            })
+        })
+        $('#t1').click(function(){              //id selector
+            console.log("you clicked on p using id selector")
+            console.log(this)
+        })
+        $('.k1').click(function(){                  //class selector
+            console.log('you clicked on p using class selector',this)
+        })
+    </script>
+</body>
+</html>
